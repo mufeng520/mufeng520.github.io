@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"content="IE=edge">
+        <meta name="viewport"content="width=device-width, initial-scale=1">
+        <meta name="renderer"content="webkit">
+        <title>VIP网络视频解析</title>
+        <script type="text/javascript">
+        window.onload=function(){
+            document.getElementById('palybox').contentDocument.oncontextmenu=function(){return false}}</script><!--上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！-->
+        <title>VIP网络视频解析</title>
+        <meta name="keywords"content="优酷VIP解析,爱奇艺VIP解析,腾讯VIP解析,乐视VIP解析,芒果VIP解析,全网视频解析,VIP在线解析,视频VIP在线解析,VIP视频在线解析"/>
+        <meta name="description"content="本站为广大网友提供优酷VIP解析，爱奇艺VIP解析，腾讯VIP解析，乐视VIP解析，芒果VIP解析等解析服务，让你省去购买视频VIP费用，欢迎大家收藏本站，并将它介绍给您的朋友！"/>
+        <!--Bootstrap-->
+        <link rel="icon"type="image/x-icon"href="./favicon.ico">
+        <link href="css/bootstrap.white.css"rel="alternate stylesheet"title="a">
+        <link href="css/bootstrap.black.css"rel="stylesheet"title="b">
+        <link rel="alternate stylesheet"type="text/css"href="./css/white.css"title="a"/>
+        <link rel="stylesheet"type="text/css"href="./css/black.css"title="b"/>
+        <link href="css/bootstrap.white.css"rel="alternate stylesheet"title="c">
+        <link href="css/bootstrap.black.css"rel="stylesheet"title="d">
+        <link rel="alternate stylesheet"type="text/css"href="./css/white.css"title="c"/>
+        <link rel="stylesheet"type="text/css"href="./css/black.css"title="d"/>
+        <!--HTML5 shim和Respond.js是为了让IE8支持HTML5元素和媒体查询（media queries）功能--><!--[if lt IE 9]><script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script><script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><[endif]-->
+        <script>document.onkeydown=function(){
+            if(window.event&&window.event.keyCode==123){
+                event.keyCode=0;event.returnValue=false
+                }
+            }
+        </script>
+    </head>
+    <body onload="document.getElementById('url').focus();">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container"><!--手机自适应样式-->
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed"type="button"id="sheet-c">开灯</button>
+                    <button class="navbar-toggle collapsed"type="button"id="sheet-d">关灯</button>
+                    <!--logo图标-->
+                    <span class="navbar-brand logo"></span>
+                </div><!--pc导航样式-->
+                <div id="navbar"class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <button type="button"id="sheet-a">开灯</button>
+                        </li>
+                        <li class="active">
+                            <button type="button"id="sheet-b">关灯</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid video-box">
+            <div class="container ">
+                <div class="tit-name">
+                    <h4><span id="video-title"></span></h4>
+                </div>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <div class="vdb"><!--<div class="vdbf">在【下方输入视频网址】开始解析</div>--></div>
+                    <iframe allowfullscreen id="palybox"class="embed-responsive-item"src=""></iframe>
+                </div>
+                <div class="row mTB20">
+                    <div class="input-group"style="width: 100%;">
+                        <span class="input-group-addon input-lg"style="width: 80px;">
+                            视频网址：
+                        </span> 
+                        <script type="text/javascript" src="/js/sr.js"></script>
+                        <script>POWERMODE.colorful = true;POWERMODE.shake = false;document.body.addEventListener('input', POWERMODE);</script>
+                        <input type="text" name="url" id="url"class="form-control input-lg"placeholder="粘贴vip视频页面网址在此 → 地址开头带http://或者https://">
+                        <select id="jk"class="form-control input-lg">
+                            <option value="https://vip.parwix.com:4433/player/?url=">线路 1</option>
+                            <option value="https://vip.laobandq.com/jiexi.php?url=">线路 2</option>
+                            <option value="https://jx.parwix.com:4433/player/?url=">线路 3</option>
+                            <option value="https://jx.youyitv.com/?url=">线路 4</option>
+                            <option value="https://www.administratorw.com/video.php?url=">线路 5</option>
+                            <option value="https://www.pangujiexi.cc/jiexi.php?url=">线路 6</option>
+                            <option value="https://www.chok8.com/jx/?url=">线路 7</option>
+                            <option value="https://m3u8.okjx.cc:3389/o1kjx.php?url=">线路 8</option>
+                            <option value="https://z1.m1907.cn/?a=1&jx=">连播线路</option>
+                        </select>
+                        <button id="alertBtn" type="submit" onclick="play()" class="btn btn-primary btn-lg btn-block">解析</button>
+                    </div>
+                </div>
+                <!--公告-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <font style="font-size:14px;">支持解析的网站</font>:&nbsp;&nbsp;&nbsp;
+                            <a class="url"target="_blank"href="https://v.qq.com/">腾讯</a>
+                            <a class="url"target="_blank"href="https://www.iqiyi.com/">爱奇艺</a>
+                            <a class="url"target="_blank"href="https://www.youku.com/">优酷</a>
+                            <a class="url"target="_blank"href="https://www.bilibili.com/">哔哩哔哩</a>
+                            <a class="url"target="_blank"href="https://www.le.com/">乐视</a>
+                            <a class="url"target="_blank"href="https://www.mgtv.com/">芒果</a>
+                            <a class="url"target="_blank"href="https://tv.sohu.com/">搜狐</a>
+                            <a class="url"target="_blank"href="https://www.pptv.com/">PP视频</a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>1、如果 <font style="font-weight:bold;color:#ff6464">[不能播放]</font> 或者 <font style="font-weight:bold;color:#ff6464">[时长不对]</font> 或者 <font style="font-weight:bold;color:#ff6464">[内容不对]</font> ，<font style="font-weight:bold;color:white">请依次尝试</font><font style="color:#89ff00;filter: drop-shadow(0px 0px 4px #404040)">【更换解析线路】</font>不是所有vip视频都保证解析成功</p>
+                        <p style="color:white">2、支持VIP剧集/VIP电影解析，超前点播解析，付费观看解析</p>
+                        <p <font style="color:white">3、观看体验电脑端上体验最佳，手机访问会出现解析接口的广告</font></p>
+                        <p>4、本程序来源github开源代码，只提供web页面服务仅供学习交流，不提供影片资源存储、录制、上传 、下载，不提供程序接口开发</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="js/tv.js" /></script>
+    <script src="js/theme.js" /></script>
+    </body>
+</html>
+    
